@@ -1,5 +1,5 @@
-import 'package:practicestacked/ui/views/Login/loginView.dart';
-import 'package:practicestacked/ui/views/signUp/signUpView.dart';
+import 'package:medicaApp/ui/views/Login/loginView.dart';
+import 'package:medicaApp/ui/views/signUp/signUpView.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 

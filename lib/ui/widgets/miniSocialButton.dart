@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-Widget socialLoginButton(
-    {required txt, required f, required img, required ctx}) {
+Widget miniSocialLoginButton(
+    {required f, required img, required ctx,}) {
   return Padding(
     padding: const EdgeInsets.only(top: 15.0),
     child: SizedBox(
-      width: MediaQuery.of(ctx).size.width *.85,
+      width: MediaQuery.of(ctx).size.width * 0.18,
       height: MediaQuery.of(ctx).size.height * .07,
       child: ElevatedButton(
         style: ButtonStyle(
@@ -22,21 +22,9 @@ Widget socialLoginButton(
             ),
           ),
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image(
-              image: AssetImage(img),
-              height: 35,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 10.0),
-              child: Text(
-                txt,
-                style: TextStyle(color: Colors.black, fontSize: 16),
-              ),
-            ),
-          ],
+        child: Image(
+          image: AssetImage(img),
+          height: 35,
         ),
         onPressed: f,
       ),

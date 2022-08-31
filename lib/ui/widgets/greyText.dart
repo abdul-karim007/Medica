@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 greyText({
   required t,
+  required double p
 }) {
   return Padding(
-    padding: const EdgeInsets.only(left: 12.0, right: 12),
+    padding: EdgeInsets.only(left: p, right: p),
     child: Text(
       t,
       style: const TextStyle(color: Colors.grey, fontSize: 16),

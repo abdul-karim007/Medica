@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:practicestacked/Constants/img.dart';
-import 'package:practicestacked/Constants/txt.dart';
-import 'package:practicestacked/ui/views/Login/loginViewModel.dart';
-import 'package:practicestacked/ui/views/signUp/signUpView.dart';
-import 'package:practicestacked/ui/widgets/bigText.dart';
-import 'package:practicestacked/ui/widgets/loginPassword.dart';
-import 'package:practicestacked/ui/widgets/socialLoginbutton.dart';
-import 'package:practicestacked/ui/widgets/greyText.dart';
-import 'package:practicestacked/ui/widgets/seperatorline.dart';
+import 'package:medicaApp/Constants/img.dart';
+import 'package:medicaApp/Constants/txt.dart';
+import 'package:medicaApp/ui/views/Login/loginViewModel.dart';
+import 'package:medicaApp/ui/widgets/bigText.dart';
+import 'package:medicaApp/ui/widgets/blueButton.dart';
+import 'package:medicaApp/ui/widgets/socialLoginbutton.dart';
+import 'package:medicaApp/ui/widgets/greyText.dart';
+import 'package:medicaApp/ui/widgets/seperatorline.dart';
 import 'package:stacked/stacked.dart';
 
 class LoginView extends StatelessWidget {
@@ -31,17 +30,17 @@ class LoginView extends StatelessWidget {
                     height: MediaQuery.of(context).size.height * .3,
                   )),
                   bigText(t: textConstant.letsyouIn),
-                  customButton(
+                  socialLoginButton(
                       txt: textConstant.loginFb,
                       f: () {},
                       img: imageConstants.fbLogo,
                       ctx: context),
-                  customButton(
+                  socialLoginButton(
                       txt: textConstant.loginGoogle,
                       f: () {},
                       img: imageConstants.googleLogo,
                       ctx: context),
-                  customButton(
+                  socialLoginButton(
                       txt: textConstant.loginApple,
                       f: () {},
                       img: imageConstants.appleLogo,
@@ -53,16 +52,16 @@ class LoginView extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         sepLine(ctx: context),
-                        greyText(t: textConstant.or),
+                        greyText(t: textConstant.or, p: 12),
                         sepLine(ctx: context)
                       ],
                     ),
                   ),
-                  loginPassword(t: textConstant.loginPassword, ctx: context),
+                  blueButton(t: textConstant.loginPassword, ctx: context),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      greyText(t: textConstant.dontHaveAnAccount),
+                      greyText(t: textConstant.dontHaveAnAccount, p: 0),
                       TextButton(
                           onPressed: () {
                             model.navigate();
@@ -72,7 +71,7 @@ class LoginView extends StatelessWidget {
                             style: TextStyle(fontSize: 16),
                           ))
                     ],
-                  )
+                  ),
                 ],
               ),
             ));
