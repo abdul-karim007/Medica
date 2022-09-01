@@ -54,7 +54,7 @@ class SignupView extends StatelessWidget {
                       ],
                     ),
                   ),
-                  blueButton(t: textConstant.signup, ctx: context),
+                  blueButton(t: textConstant.signup, ctx: context,f: {}),
                   Padding(
                     padding: EdgeInsets.only(top: 15, bottom: 10),
                     child: greyText(t: textConstant.orContwith, p: 0),
@@ -85,10 +85,10 @@ class SignupView extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        greyText(t: textConstant.alreadyHaveAnAccount, p: 0x),
+                        greyText(t: textConstant.alreadyHaveAnAccount, p: 0),
                         TextButton(
                             onPressed: () {
-                              model.navigate();
+                              model.navigateToLogin();
                             },
                             child: Text(
                               textConstant.signin,

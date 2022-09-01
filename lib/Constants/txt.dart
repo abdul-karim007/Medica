@@ -14,4 +14,11 @@ class textConstant {
   static String orContwith = 'or continue with';
   static String alreadyHaveAnAccount = 'Already have an account?';
   static String signin = 'Sign in';
+  static String morning = 'Good Morning';
+  static String afternoon = 'Good Afternoon';
+  static String evening = 'Good Evening';
+  static String search = 'Search';
+  static String medicalChecks = 'Medical Checks!';
+  static String checkNow = 'Check Now';
+  static String cardText = 'An Apple a day, keeps the doctor away';
 }

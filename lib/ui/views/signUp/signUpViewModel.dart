@@ -5,7 +5,7 @@ import 'package:stacked_services/stacked_services.dart';
 
 class SignupViewModel extends BaseViewModel {
   final navigationService = locator<NavigationService>();
-  void navigate() {
+  void navigateToLogin() {
     navigationService.navigateTo(Routes.loginView);
   }
 }

@@ -6,7 +6,11 @@ import 'package:medicaApp/app/app.locator.dart';
 class LoginViewModel extends BaseViewModel {
   final navigationService = locator<NavigationService>();
 
-  void navigate() {
+  void navigateToSignUp() {
     navigationService.navigateTo(Routes.signupView);
+  }
+
+  void navigateToHome() {
+    navigationService.navigateTo(Routes.homeView);
   }
 }

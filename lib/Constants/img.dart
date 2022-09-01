@@ -4,4 +4,5 @@ class imageConstants {
   static String googleLogo = 'assets/googleLogo.png';
   static String appleLogo = 'assets/appleLogo.png';
   static String signUpLogo = 'assets/signupLogo.png';
+  static String doctor = 'assets/doctor.png';
 }

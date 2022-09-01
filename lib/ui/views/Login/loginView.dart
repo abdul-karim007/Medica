@@ -57,14 +57,17 @@ class LoginView extends StatelessWidget {
                       ],
                     ),
                   ),
-                  blueButton(t: textConstant.loginPassword, ctx: context),
+                  blueButton(
+                      t: textConstant.loginPassword,
+                      ctx: context,
+                      f: model.navigateToHome),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       greyText(t: textConstant.dontHaveAnAccount, p: 0),
                       TextButton(
                           onPressed: () {
-                            model.navigate();
+                            model.navigateToSignUp();
                           },
                           child: Text(
                             textConstant.signup,

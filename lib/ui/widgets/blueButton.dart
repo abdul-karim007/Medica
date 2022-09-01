@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-blueButton({required t, required ctx, }) {
+blueButton({required t, required ctx, required f}) {
   return SizedBox(
     width: MediaQuery.of(ctx).size.width * .85,
     height: MediaQuery.of(ctx).size.height * .07,
@@ -11,7 +11,7 @@ blueButton({required t, required ctx, }) {
             borderRadius: BorderRadius.circular(45.0),
           )),
         ),
-        onPressed: () {},
+        onPressed: f,
         child: Text(t)),
   );
 }
