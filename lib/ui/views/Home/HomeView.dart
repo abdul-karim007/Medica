@@ -4,7 +4,10 @@ import 'package:medicaApp/Constants/img.dart';
 import 'package:medicaApp/Constants/txt.dart';
 import 'package:medicaApp/ui/views/Home/HomeViewModel.dart';
 import 'package:medicaApp/ui/widgets/SignUpTextField.dart';
+import 'package:medicaApp/ui/widgets/customTextButton.dart';
 import 'package:medicaApp/ui/widgets/homeCard.dart';
+import 'package:medicaApp/ui/widgets/homeIconCont.dart';
+import 'package:medicaApp/ui/widgets/homeText.dart';
 import 'package:stacked/stacked.dart';
 
 class HomeView extends StatelessWidget {
@@ -35,11 +38,7 @@ class HomeView extends StatelessWidget {
                           model.greeting(),
                           style: TextStyle(color: Colors.grey, fontSize: 14),
                         ),
-                        Text(
-                          'Name',
-                          style: TextStyle(
-                              color: Colors.black, fontWeight: FontWeight.w600),
-                        )
+                        homeText(txt: textConstant.name)
                       ],
                     ),
                   ],
@@ -49,8 +48,10 @@ class HomeView extends StatelessWidget {
                     onPressed: () {},
                     icon: Icon(Icons.notifications_outlined),
                   ),
-                  IconButton(
-                      onPressed: () {}, icon: Icon(Icons.favorite_outline))
+                  Padding(
+                      padding: const EdgeInsets.only(right: 14.0),
+                      child: IconButton(
+                          onPressed: () {}, icon: Icon(Icons.favorite_outline)))
                 ],
               ),
               body: Column(
@@ -75,6 +76,43 @@ class HomeView extends StatelessWidget {
                               buttonText: textConstant.checkNow,
                               img: imageConstants.doctor);
                         }),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * .9,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        homeText(txt: textConstant.doctorSpeciality),
+                        customTextButton(f: () {}, t: textConstant.seeAll)
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * .85,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        homeIconCont(icn: Icons.people_alt),
+                        homeIconCont(icn: Icons.health_and_safety),
+                        homeIconCont(icn: Icons.remove_red_eye),
+                        homeIconCont(icn: Icons.food_bank)
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width * .85,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          homeText(txt: textConstant.general),
+                          homeText(txt: textConstant.dentist),
+                          homeText(txt: textConstant.opthalmic),
+                          homeText(txt: textConstant.nutritionist),
+                        ],
+                      ),
+                    ),
                   ),
                 ],
               ),

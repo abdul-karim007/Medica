@@ -21,4 +21,11 @@ class textConstant {
   static String medicalChecks = 'Medical Checks!';
   static String checkNow = 'Check Now';
   static String cardText = 'An Apple a day, keeps the doctor away';
+  static String name = 'Barack Obama';
+  static String doctorSpeciality = 'Doctor Speciality';
+  static String seeAll = 'See All';
+  static String general = 'General..';
+  static String dentist = 'Dentist';
+  static String opthalmic = 'Opthal..';
+  static String nutritionist = 'Nutrition';
 }

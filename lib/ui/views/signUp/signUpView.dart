@@ -8,7 +8,6 @@ import 'package:medicaApp/ui/widgets/customCheckBox.dart';
 import 'package:medicaApp/ui/widgets/greyText.dart';
 import 'package:medicaApp/ui/widgets/blueButton.dart';
 import 'package:medicaApp/ui/widgets/miniSocialButton.dart';
-import 'package:medicaApp/ui/widgets/socialLoginbutton.dart';
 import 'package:stacked/stacked.dart';
 
 class SignupView extends StatelessWidget {
