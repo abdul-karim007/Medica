@@ -4,8 +4,9 @@ import 'package:medicaApp/Constants/txt.dart';
 import 'package:medicaApp/ui/views/Login/loginViewModel.dart';
 import 'package:medicaApp/ui/widgets/bigText.dart';
 import 'package:medicaApp/ui/widgets/blueButton.dart';
+import 'package:medicaApp/ui/widgets/customTextButton.dart';
 import 'package:medicaApp/ui/widgets/socialLoginbutton.dart';
-import 'package:medicaApp/ui/widgets/greyText.dart';
+import 'package:medicaApp/ui/widgets/GreyText.dart';
 import 'package:medicaApp/ui/widgets/seperatorline.dart';
 import 'package:stacked/stacked.dart';
 
@@ -52,27 +53,19 @@ class LoginView extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         sepLine(ctx: context, w: .35),
-                        greyText(t: textConstant.or, p: 12),
+                        GreyText(t: textConstant.or, p: 12),
                         sepLine(ctx: context, w: .35)
                       ],
                     ),
                   ),
-                  blueButton(
-                      t: textConstant.loginPassword,
-                      ctx: context,
-                      f: model.navigateToHome),
+                  BlueButton(
+                      t: textConstant.loginPassword, f: model.navigateToHome),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      greyText(t: textConstant.dontHaveAnAccount, p: 0),
-                      TextButton(
-                          onPressed: () {
-                            model.navigateToSignUp();
-                          },
-                          child: Text(
-                            textConstant.signup,
-                            style: TextStyle(fontSize: 16),
-                          ))
+                      GreyText(t: textConstant.dontHaveAnAccount, p: 0),
+                      CustomTextButton(
+                          f: model.navigateToSignUp, t: textConstant.signup)
                     ],
                   ),
                 ],

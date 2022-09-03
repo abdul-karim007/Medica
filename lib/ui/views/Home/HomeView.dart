@@ -68,7 +68,7 @@ class HomeView extends StatelessWidget {
                     child: PageView.builder(
                         itemCount: 3,
                         itemBuilder: (_, index) {
-                          return homeBlueCard1(
+                          return HomeBlueCard(
                               pos: index.toDouble(),
                               // context: context,
                               headText: textConstant.medicalChecks,
@@ -83,7 +83,7 @@ class HomeView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         homeText(txt: textConstant.doctorSpeciality),
-                        customTextButton(f: () {}, t: textConstant.seeAll)
+                        CustomTextButton(f: () {}, t: textConstant.seeAll)
                       ],
                     ),
                   ),
@@ -160,7 +160,7 @@ class HomeView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         homeText(txt: textConstant.topDocs),
-                        customTextButton(f: () {}, t: textConstant.seeAll)
+                        CustomTextButton(f: () {}, t: textConstant.seeAll)
                       ],
                     ),
                   ),

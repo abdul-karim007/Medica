@@ -1,29 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:medicaApp/ui/widgets/DocImageContainer.dart';
 import 'package:medicaApp/ui/widgets/bigText.dart';
 import 'package:medicaApp/ui/widgets/smallText.dart';
 
 topDocListTile(
     {required ctx,
-    required img,
+    required imaage,
     required bigT,
     required smallT,
-    required smallT2}) {
+    required smallT2, required f}) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
     child: ListTile(
+      onTap: f,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      leading: Container(
-        width: MediaQuery.of(ctx).size.width * .2,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-            color: Colors.grey[200], borderRadius: BorderRadius.circular(15)),
-        child: Image(
-          image: AssetImage(
-            img,
-          ),
-          height: 100,
-        ),
-      ),
+      leading: DoctorImageContainer(img: imaage),
       tileColor: Colors.white,
       title: bigText(t: bigT, f: 18),
       subtitle: Column(

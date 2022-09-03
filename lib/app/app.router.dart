@@ -11,6 +11,7 @@ import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 import '../ui/views/Categories/CategoriesView.dart';
+import '../ui/views/Doctor%20Details/docDetailsView.dart';
 import '../ui/views/FluidBottomNav/FluidBottomNavView.dart';
 import '../ui/views/Login/loginView.dart';
 import '../ui/views/signUp/signUpView.dart';
@@ -20,11 +21,13 @@ class Routes {
   static const String signupView = '/signup-view';
   static const String btmNavView = '/btm-nav-view';
   static const String categoriesView = '/categories-view';
+  static const String doctorDetailsView = '/doctor-details-view';
   static const all = <String>{
     loginView,
     signupView,
     btmNavView,
     categoriesView,
+    doctorDetailsView,
   };
 }
 
@@ -36,6 +39,7 @@ class StackedRouter extends RouterBase {
     RouteDef(Routes.signupView, page: SignupView),
     RouteDef(Routes.btmNavView, page: BtmNavView),
     RouteDef(Routes.categoriesView, page: CategoriesView),
+    RouteDef(Routes.doctorDetailsView, page: DoctorDetailsView),
   ];
   @override
   Map<Type, StackedRouteFactory> get pagesMap => _pagesMap;
@@ -61,6 +65,12 @@ class StackedRouter extends RouterBase {
     CategoriesView: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => const CategoriesView(),
+        settings: data,
+      );
+    },
+    DoctorDetailsView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const DoctorDetailsView(),
         settings: data,
       );
     },
@@ -129,6 +139,22 @@ extension NavigatorStateExtension on NavigationService {
   }) async {
     return navigateTo(
       Routes.categoriesView,
+      id: routerId,
+      preventDuplicates: preventDuplicates,
+      parameters: parameters,
+      transition: transition,
+    );
+  }
+
+  Future<dynamic> navigateToDoctorDetailsView({
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  }) async {
+    return navigateTo(
+      Routes.doctorDetailsView,
       id: routerId,
       preventDuplicates: preventDuplicates,
       parameters: parameters,

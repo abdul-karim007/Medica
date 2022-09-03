@@ -42,4 +42,12 @@ class textConstant {
   static String topDoc = 'Top Doctors';
   static String docSheldon = 'Dr. Sheldon Cooper';
   static String cityHosp = 'The City Hospital';
+  static String fivek = '5000+';
+  static String tenPlus = '10+';
+  static String decimal = '4.8';
+  static String randomNo = '4297';
+  static String patients = 'patients';
+  static String yearsExp = 'years exp';
+  static String rating = 'rating';
+  static String reviews = 'reviews';
 }

@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 
-blueButton({required t, required ctx, required f}) {
-  return SizedBox(
-    width: MediaQuery.of(ctx).size.width * .85,
-    height: MediaQuery.of(ctx).size.height * .07,
+class BlueButton extends StatelessWidget {
+  late var f;
+  late String t;
+  BlueButton({Key? key, required this.t, required this.f}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+    width: MediaQuery.of(context).size.width * .85,
+    height: MediaQuery.of(context).size.height * .07,
     child: ElevatedButton(
         style: ButtonStyle(
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -14,4 +20,6 @@ blueButton({required t, required ctx, required f}) {
         onPressed: f,
         child: Text(t)),
   );
+  }
 }
+

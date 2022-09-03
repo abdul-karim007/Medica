@@ -1,15 +1,21 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 
-homeBlueCard1(
-    {
-    // required context,
-    required headText,
-    required contText,
-    required buttonText,
-    required img,
-    required double pos}) {
-  return Stack(
+class HomeBlueCard extends StatelessWidget {
+  late String headText;
+  late String contText;
+  late String buttonText;
+  late String img;
+  late double pos;
+  HomeBlueCard({Key? key,     required this.headText,
+    required this.contText,
+    required this.buttonText,
+    required this.img,
+    required this.pos}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
     children: [
       Padding(
         padding: const EdgeInsets.only(top: 18.0, left: 20, right: 20),
@@ -93,4 +99,7 @@ homeBlueCard1(
       )
     ],
   );
+  }
 }
+
+

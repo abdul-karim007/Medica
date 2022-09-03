@@ -3,8 +3,6 @@ import 'package:medicaApp/Constants/img.dart';
 import 'package:medicaApp/Constants/txt.dart';
 import 'package:medicaApp/ui/views/Categories/CategoriesViewModel.dart';
 import 'package:medicaApp/ui/widgets/bigText.dart';
-import 'package:medicaApp/ui/widgets/seperatorline.dart';
-import 'package:medicaApp/ui/widgets/smallText.dart';
 import 'package:medicaApp/ui/widgets/topDocListtile.dart';
 import 'package:stacked/stacked.dart';
 
@@ -40,32 +38,37 @@ class CategoriesView extends StatelessWidget {
                       child: ListView(
                         children: [
                           topDocListTile(
+                              f: model.navigateToDetails,
                               ctx: context,
-                              img: imageConstants.doctor,
+                              imaage: imageConstants.doctor,
                               bigT: textConstant.docSheldon,
                               smallT: textConstant.pediatric,
                               smallT2: textConstant.cityHosp),
                           topDocListTile(
+                              f: model.navigateToDetails,
                               ctx: context,
-                              img: imageConstants.doctor,
+                              imaage: imageConstants.doctor,
                               bigT: textConstant.docSheldon,
                               smallT: textConstant.pediatric,
                               smallT2: textConstant.cityHosp),
                           topDocListTile(
+                              f: model.navigateToDetails,
                               ctx: context,
-                              img: imageConstants.doctor,
+                              imaage: imageConstants.doctor,
                               bigT: textConstant.docSheldon,
                               smallT: textConstant.pediatric,
                               smallT2: textConstant.cityHosp),
                           topDocListTile(
+                              f: model.navigateToDetails,
                               ctx: context,
-                              img: imageConstants.doctor,
+                              imaage: imageConstants.doctor,
                               bigT: textConstant.docSheldon,
                               smallT: textConstant.pediatric,
                               smallT2: textConstant.cityHosp),
                           topDocListTile(
+                              f: model.navigateToDetails,
                               ctx: context,
-                              img: imageConstants.doctor,
+                              imaage: imageConstants.doctor,
                               bigT: textConstant.docSheldon,
                               smallT: textConstant.pediatric,
                               smallT2: textConstant.cityHosp),

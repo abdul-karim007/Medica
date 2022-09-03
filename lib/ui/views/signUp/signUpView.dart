@@ -5,7 +5,8 @@ import 'package:medicaApp/ui/views/signUp/signUpViewModel.dart';
 import 'package:medicaApp/ui/widgets/SignUpTextField.dart';
 import 'package:medicaApp/ui/widgets/bigText.dart';
 import 'package:medicaApp/ui/widgets/customCheckBox.dart';
-import 'package:medicaApp/ui/widgets/greyText.dart';
+import 'package:medicaApp/ui/widgets/customTextButton.dart';
+import 'package:medicaApp/ui/widgets/GreyText.dart';
 import 'package:medicaApp/ui/widgets/blueButton.dart';
 import 'package:medicaApp/ui/widgets/miniSocialButton.dart';
 import 'package:stacked/stacked.dart';
@@ -29,7 +30,7 @@ class SignupView extends StatelessWidget {
                   Center(
                     child: Image(image: AssetImage(imageConstants.signUpLogo)),
                   ),
-                  bigText(t: textConstant.createNew,f: 35.0),
+                  bigText(t: textConstant.createNew, f: 35.0),
                   signUpTextField(
                       ctx: context,
                       t: textConstant.email,
@@ -45,7 +46,7 @@ class SignupView extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        customCheckBox(),
+                        CustomCheckBox(),
                         Text(
                           textConstant.rememberMe,
                           style: TextStyle(fontSize: 15),
@@ -53,10 +54,10 @@ class SignupView extends StatelessWidget {
                       ],
                     ),
                   ),
-                  blueButton(t: textConstant.signup, ctx: context,f: {}),
+                  BlueButton(t: textConstant.signup, f: () {}),
                   Padding(
                     padding: EdgeInsets.only(top: 15, bottom: 10),
-                    child: greyText(t: textConstant.orContwith, p: 0),
+                    child: GreyText(t: textConstant.orContwith, p: 0),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -84,15 +85,9 @@ class SignupView extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        greyText(t: textConstant.alreadyHaveAnAccount, p: 0),
-                        TextButton(
-                            onPressed: () {
-                              model.navigateToLogin();
-                            },
-                            child: Text(
-                              textConstant.signin,
-                              style: TextStyle(fontSize: 16),
-                            ))
+                        GreyText(t: textConstant.alreadyHaveAnAccount, p: 0),
+                        CustomTextButton(
+                            f: model.navigateToLogin, t: textConstant.signin)
                       ],
                     ),
                   ),
