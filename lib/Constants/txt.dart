@@ -28,4 +28,18 @@ class textConstant {
   static String dentist = 'Dentist';
   static String opthalmic = 'Opthal..';
   static String nutritionist = 'Nutrition';
+  static String neurologist = 'Neuro..';
+  static String pediatric = 'Pediatric';
+  static String radiologist = 'Radiolo..';
+  static String more = 'more';
+  static String topDocs = 'Top Doctors';
+  static String all = 'All';
+  static String home = 'Home';
+  static String appointment = 'Appointments';
+  static String history = 'History';
+  static String articles = 'Articles';
+  static String profile = 'Profiles';
+  static String topDoc = 'Top Doctors';
+  static String docSheldon = 'Dr. Sheldon Cooper';
+  static String cityHosp = 'The City Hospital';
 }

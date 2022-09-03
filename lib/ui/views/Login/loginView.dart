@@ -29,7 +29,7 @@ class LoginView extends StatelessWidget {
                     image: AssetImage(imageConstants.loginLogo),
                     height: MediaQuery.of(context).size.height * .3,
                   )),
-                  bigText(t: textConstant.letsyouIn),
+                  bigText(t: textConstant.letsyouIn, f: 35.0),
                   socialLoginButton(
                       txt: textConstant.loginFb,
                       f: () {},
@@ -51,9 +51,9 @@ class LoginView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        sepLine(ctx: context),
+                        sepLine(ctx: context, w: .35),
                         greyText(t: textConstant.or, p: 12),
-                        sepLine(ctx: context)
+                        sepLine(ctx: context, w: .35)
                       ],
                     ),
                   ),

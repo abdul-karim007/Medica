@@ -29,7 +29,7 @@ class SignupView extends StatelessWidget {
                   Center(
                     child: Image(image: AssetImage(imageConstants.signUpLogo)),
                   ),
-                  bigText(t: textConstant.createNew),
+                  bigText(t: textConstant.createNew,f: 35.0),
                   signUpTextField(
                       ctx: context,
                       t: textConstant.email,

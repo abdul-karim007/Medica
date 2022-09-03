@@ -10,18 +10,21 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
-import '../ui/views/Home/HomeView.dart';
+import '../ui/views/Categories/CategoriesView.dart';
+import '../ui/views/FluidBottomNav/FluidBottomNavView.dart';
 import '../ui/views/Login/loginView.dart';
 import '../ui/views/signUp/signUpView.dart';
 
 class Routes {
   static const String loginView = '/';
   static const String signupView = '/signup-view';
-  static const String homeView = '/home-view';
+  static const String btmNavView = '/btm-nav-view';
+  static const String categoriesView = '/categories-view';
   static const all = <String>{
     loginView,
     signupView,
-    homeView,
+    btmNavView,
+    categoriesView,
   };
 }
 
@@ -31,7 +34,8 @@ class StackedRouter extends RouterBase {
   final _routes = <RouteDef>[
     RouteDef(Routes.loginView, page: LoginView),
     RouteDef(Routes.signupView, page: SignupView),
-    RouteDef(Routes.homeView, page: HomeView),
+    RouteDef(Routes.btmNavView, page: BtmNavView),
+    RouteDef(Routes.categoriesView, page: CategoriesView),
   ];
   @override
   Map<Type, StackedRouteFactory> get pagesMap => _pagesMap;
@@ -48,9 +52,15 @@ class StackedRouter extends RouterBase {
         settings: data,
       );
     },
-    HomeView: (data) {
+    BtmNavView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const HomeView(),
+        builder: (context) => const BtmNavView(),
+        settings: data,
+      );
+    },
+    CategoriesView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const CategoriesView(),
         settings: data,
       );
     },
@@ -94,7 +104,7 @@ extension NavigatorStateExtension on NavigationService {
     );
   }
 
-  Future<dynamic> navigateToHomeView({
+  Future<dynamic> navigateToBtmNavView({
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
@@ -102,7 +112,23 @@ extension NavigatorStateExtension on NavigationService {
         transition,
   }) async {
     return navigateTo(
-      Routes.homeView,
+      Routes.btmNavView,
+      id: routerId,
+      preventDuplicates: preventDuplicates,
+      parameters: parameters,
+      transition: transition,
+    );
+  }
+
+  Future<dynamic> navigateToCategoriesView({
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  }) async {
+    return navigateTo(
+      Routes.categoriesView,
       id: routerId,
       preventDuplicates: preventDuplicates,
       parameters: parameters,

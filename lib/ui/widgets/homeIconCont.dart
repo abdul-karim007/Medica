@@ -8,9 +8,8 @@ homeIconCont({required icn}) {
     decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(45),
         color: Colors.blue.withOpacity(.1)),
-    child: Icon(
+    child: 
       icn,
-      color: Colors.blue,
-    ),
+      
   );
 }
