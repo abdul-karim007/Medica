@@ -4,7 +4,9 @@ import 'package:medicaApp/Constants/txt.dart';
 import 'package:medicaApp/ui/views/Doctor%20Details/docDetailsViewModel.dart';
 import 'package:medicaApp/ui/widgets/DocImageContainer.dart';
 import 'package:medicaApp/ui/widgets/bigText.dart';
+import 'package:medicaApp/ui/widgets/blueButton.dart';
 import 'package:medicaApp/ui/widgets/bluetext.dart';
+import 'package:medicaApp/ui/widgets/customTextButton.dart';
 import 'package:medicaApp/ui/widgets/homeIconCont.dart';
 import 'package:medicaApp/ui/widgets/seperatorline.dart';
 import 'package:medicaApp/ui/widgets/smallText.dart';
@@ -35,116 +37,139 @@ class DoctorDetailsView extends StatelessWidget {
                           icon: Icon(Icons.more_horiz_outlined)))
                 ],
               ),
-              body: Column(
-                children: [
-                  Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 18, vertical: 6),
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 10, vertical: 10),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(18),
+              body: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 6),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 10),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(18),
+                        ),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            DoctorImageContainer(img: imageConstants.doctor),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 18.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  bigText(t: textConstant.docSheldon, f: 18),
+                                  sepLine(ctx: context, w: .6),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 10.0),
+                                    child: smallText(
+                                        yourString: textConstant.pediatric),
+                                  ),
+                                  smallText(yourString: textConstant.cityHosp)
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          DoctorImageContainer(img: imageConstants.doctor),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 18.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width * .88,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              // mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                bigText(t: textConstant.docSheldon, f: 18),
-                                sepLine(ctx: context, w: .6),
+                                homeIconCont(
+                                    icn: Icon(
+                                  Icons.groups,
+                                  color: Colors.blue,
+                                )),
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 10.0),
-                                  child: smallText(
-                                      yourString: textConstant.pediatric),
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 8.0),
+                                  child: BlueText(textt: textConstant.fivek),
                                 ),
-                                smallText(yourString: textConstant.cityHosp)
+                                smallText(yourString: textConstant.patients)
                               ],
                             ),
-                          )
-                        ],
+                            Column(
+                              children: [
+                                homeIconCont(
+                                    icn: Icon(
+                                  Icons.timeline,
+                                  color: Colors.blue,
+                                )),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    vertical: 8.0,
+                                  ),
+                                  child: BlueText(textt: textConstant.tenPlus),
+                                ),
+                                smallText(yourString: textConstant.yearsExp)
+                              ],
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                homeIconCont(
+                                    icn: Icon(
+                                  Icons.star_half,
+                                  color: Colors.blue,
+                                )),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 8.0),
+                                  child: BlueText(textt: textConstant.decimal),
+                                ),
+                                smallText(yourString: textConstant.rating)
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                homeIconCont(
+                                    icn: Icon(
+                                  Icons.reviews,
+                                  color: Colors.blue,
+                                )),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 8.0),
+                                  child: BlueText(textt: textConstant.randomNo),
+                                ),
+                                smallText(yourString: textConstant.reviews),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 12.0, bottom: 12),
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width * .88,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            // mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              homeIconCont(
-                                  icn: Icon(
-                                Icons.groups,
-                                color: Colors.blue,
-                              )),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(vertical: 8.0),
-                                child: BlueText(textt: textConstant.fivek),
-                              ),
-                              smallText(yourString: textConstant.patients)
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              homeIconCont(
-                                  icn: Icon(
-                                Icons.timeline,
-                                color: Colors.blue,
-                              )),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(vertical: 8.0),
-                                child: BlueText(textt: textConstant.tenPlus),
-                              ),
-                              smallText(yourString: textConstant.yearsExp)
-                            ],
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              homeIconCont(
-                                  icn: Icon(
-                                Icons.star_half,
-                                color: Colors.blue,
-                              )),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(vertical: 8.0),
-                                child: BlueText(textt: textConstant.decimal),
-                              ),
-                              smallText(yourString: textConstant.rating)
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              homeIconCont(
-                                  icn: Icon(
-                                Icons.reviews,
-                                color: Colors.blue,
-                              )),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(vertical: 8.0),
-                                child: BlueText(textt: textConstant.randomNo),
-                              ),
-                              smallText(yourString: textConstant.reviews)
-                            ],
-                          ),
-                        ],
-                      ),
+                    bigText(t: textConstant.aboutMe, f: 18),
+                    SizedBox(
+                      child: Text(textConstant.descriptionText),
                     ),
-                  ),
-                ],
+                    Padding(
+                      padding: const EdgeInsets.only(top: 12.0),
+                      child: bigText(t: textConstant.workingTime, f: 18),
+                    ),
+                    Text(textConstant.docTime),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        bigText(t: textConstant.capReviews, f: 18),
+                        CustomTextButton(f: () {}, t: textConstant.seeAll)
+                      ],
+                    ),
+                    Center(
+                        child: BlueButton(
+                            t: textConstant.bookAppointment, f: () {}))
+                  ],
+                ),
               ),
             ));
   }

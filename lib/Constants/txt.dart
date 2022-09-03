@@ -50,4 +50,11 @@ class textConstant {
   static String yearsExp = 'years exp';
   static String rating = 'rating';
   static String reviews = 'reviews';
+  static String aboutMe = 'About me';
+  static String descriptionText =
+      'Dr. Sheldon Cooper is top most pediatrics specialist in city Hospital at London. He has achieved many awards for multiple contributions to modern sciences.';
+  static String workingTime = 'Working Time';
+  static String docTime = 'Monday - Friday, 08:00 AM to 08:00 PM';
+  static String capReviews = 'Reviews';
+  static String bookAppointment = 'Book Appointment';
 }
